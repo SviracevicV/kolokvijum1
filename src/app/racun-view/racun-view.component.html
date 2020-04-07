@@ -1,0 +1,30 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Datum</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let racun of racuni">
+        <td>{{racun.id}}</td>
+        <td>{{racun.datumRacuna}}</td>
+        
+        <td>
+          <a routerLink="/racuni/{{racun.id}}">
+            View
+          </a>
+        </td>
+        <td>
+          <a>
+          <button (click)="onDelete(racun)" class="del">Delete</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+    <div>
+        <a routerLink="/addR">Racun Add</a>
+      </div>
+    <router-outlet></router-outlet>
+  </table>

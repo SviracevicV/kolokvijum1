@@ -1,0 +1,16 @@
+<select [(ngModel)]="racun" name="racun">
+    <option *ngFor='let racun of racuni'>
+      {{racun.id}}
+    </option>
+  </select>
+  <select [(ngModel)]="artikal" name="artikal">
+    <option *ngFor='let artikal of artikli'>
+      {{artikal.id}}
+      {{artikal.naziv}}
+      
+    </option>
+  </select>
+    <tr *ngFor="let stavka of stavke">
+        <td>{{stavka.id}}</td>
+        <td>{{stavka.cena}}</td>
+        <td>{{stavka.kolicina}}</td>

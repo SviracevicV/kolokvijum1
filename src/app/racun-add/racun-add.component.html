@@ -1,0 +1,11 @@
+<h2>Enter new Artikal</h2>
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="racun">Datum</label>
+      <input name="datum" type="date" class="form-control" id="date" [(ngModel)]="racun.datumRacuna" required>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>

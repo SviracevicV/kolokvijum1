@@ -1,0 +1,27 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Naziv</th>
+        <th scope="col">Cena</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let artikal of artikli">
+        <td>{{artikal.id}}</td>
+        <td>{{artikal.naziv}}</td>
+        <td>{{artikal.cena}}</td>
+        
+        <td>
+          <a routerLink="/artikli/{{artikal.id}}">
+            View
+          </a>
+        </td>
+        <td>
+          <a>
+          <button (click)="onDelete(artikal)" class="del">Delete</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
